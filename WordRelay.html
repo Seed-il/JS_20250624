@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>끝말잇기</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div><span id="order">1</span>번째 참가자</div>
+	<div>제시어: <span id="word"></span></div>
+	<input type="text">
+	<button id="btn">입력</button>
+
+	<script>
+		const number = parseInt(prompt('몇 명이 참가하나요?'), 10);
+		const $button = document.querySelector('button');
+		const $input = document.querySelector('input');
+		const $word = document.querySelector('#word');
+		
+		let word; // 제시어
+		let newWord; // 새로 입력한 단어
+		const onClickButton = () =>{
+			if(!word){ // 제시어가 비어있는가?
+				word = newWord;
+				$word.textContent = word; // 제시어 갱신
+				$input.value = '';
+			} else { // 아닐 때
+				// 2번째 제시어부터는 여기로 올 것.
+				// 올바른 단어인지 체크해야한다.
+				if(word[word.length - 1] === newWord[0]){ // 올바른가
+					$word.textContent = newWord; // 제시어 갱신
+					$input.value = '';
+				} else{ // 아닐때
+					alert('땡!@');
+				}
+			}
+		};
+		const onInput = (event) => {
+				newWord = event.target.value;
+		};
+
+		$button.addEventListener('click', onClickButton);
+		$input.addEventListener('input', onInput);
+	</script>
+</body>
+</html>
