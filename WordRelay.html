@@ -19,24 +19,26 @@
 		const $button = document.querySelector('button');
 		const $input = document.querySelector('input');
 		const $word = document.querySelector('#word');
+		const $order = document.querySelector('#order');
 		
 		let word; // 제시어
 		let newWord; // 새로 입력한 단어
 		const onClickButton = () =>{
-			if(!word){ // 제시어가 비어있는가?
+			if(!word || word[word.length - 1] === newWord[0]){ // 제시어가 비어있거나 올바른 경우
 				word = newWord;
 				$word.textContent = word; // 제시어 갱신
-				$input.value = '';
-			} else { // 아닐 때
-				// 2번째 제시어부터는 여기로 올 것.
-				// 올바른 단어인지 체크해야한다.
-				if(word[word.length - 1] === newWord[0]){ // 올바른가
-					$word.textContent = newWord; // 제시어 갱신
-					$input.value = '';
-				} else{ // 아닐때
-					alert('땡!@');
+	
+				const order = Number($order.textContent); // 현재 순서
+				if(order +1 > number){
+					$order.textContent = 1;
+				} else{
+					$order.textContent = order + 1;
 				}
+			} else { // 아닐 때
+				alert('땡!@');
 			}
+			$input.value = ''; 
+			$input.focus();
 		};
 		const onInput = (event) => {
 				newWord = event.target.value;
