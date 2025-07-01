@@ -1,61 +1,107 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>숫자야구</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NumberB</title>
 </head>
 <body>
-	<form id="form">
-		<input type="text" id="input">
-		<button>확인</button>
-	</form>
-	<div id = "logs"></div>
-	<script>
-		const $input = document.querySelector('#input');
-		const $form = document.querySelector('#form');
-		const $logs = document.querySelector('#logs');
+   <form id="form">
+    <input type="text" id="input">
+    <button>확인</button>
+   </form>
 
-		// 실행될 때 무작위 숫자 생성
-		const numbers = []
-		for(let n = 1; n<10; n++){
-			numbers.push(n);
-		}
-		const answer = [];
-		for(let i = 0; i<=3; i++){
-			const index = Math.floor(Math.random() * numbers.length); // 0~8 정수
-			answer.push(numbers[index]);
-			numbers.splice(index, 1);
-		}
-		console.log(answer);
+  <div id="logs"></div>
 
-		const tries = [];
-		function checkInput(input){
-			// 검사
-			if(input.length !== 4){
-				return alert('4자리 숫자를 입력하세요');
-			}
-			if(new Set(input).size !== 4){
-				return alert('중복되지 않게 입력하세요');
-			}
-			if(tries.includes(input)){
-				return alert('이미 시도한 값입니다.');
-			}
-			return true;
-		}
+  <script>
+    /*
+    1. 실행 시 랜덤 숫자를 생성해 저장한다. 콘솔창에도 출력해두기
+    2. 확인 버튼 클릭 시 타당성을 먼저 체크한다. -> form id를 활용
+    3. 홈런인지 체크한다. 홈런이면 <승리>게임 종료.
+    4. 스트라이크와 볼을 계산한다.
+    5. 10회차인지 확인한다. 10회차인데도 홈런이 아니라면 <패배>게임 종료.
+    */
+    const $input = document.querySelector('#input'); // id는 #로 찾기
+    const $form = document.querySelector('#form');
+    const $logs = document.querySelector('#logs');
+    let outCount = 0;
 
-		$form.addEventListener('submit', (event)=>{
-			event.preventDefault();// 기본 동작 막기(form의 경우는 새로고침됨)
-			console.log('서브밋', event);
-			const value = $input.value;
-			$input.value = '';
+    // 1. 랜덤 숫자 생성
+    const numbers = [];
+    for(let n = 1; n < 10; n++){
+      numbers.push(n);
+    }
 
-			if(checkInput(value)){
-				// 검증 통과 후 본 게임 시작
-				tries.push(value);
-			}
-		});
+    const answer = [];
+    for(let i = 0; i< 4; i++){
+      const index = Math.floor(Math.random() * numbers.length)// 0~8
+      answer.push(numbers[index]); // numbers에서 임의의 순서 넣기
+      numbers.splice(index, 1); // 순번 하나 제거
+    }
 
-	</script>
+    console.log(answer);
+
+    const tries = [];
+    // 2. 확인 버튼 클릭 시 타당성 검사
+    function checkInput(input){
+      // 4자리인지, 중복인지, 이전에 한건지 확인
+      if(input.length !== 4){
+        return alert('4자리 숫자를 입력하세요.');
+      }
+      if(new Set(input).size !== 4){
+        return alert('중복되지 않게 입력하세요.');
+      }
+      if(tries.includes(input)){
+        return alert('이미 시도한 값입니다.');
+      }
+      return true;
+    }
+
+    $form.addEventListener('submit', (event) => {
+      event.preventDefault(); // 기본 동작 막기(form의 경우 새로고침됨, 그걸 방지하고자 한다.)
+      console.log($input.value);
+      const value = $input.value;
+      $input.value = '';
+      if(!checkInput(value)){
+        console.log('에러');
+        return;
+      }
+      if(answer.join('') === value){
+        $logs.textContent = '홈런!';
+        return;
+      }
+      if(tries.length >= 9){
+        const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`);
+        $logs.appendChild(message);
+        return;
+      }
+      // 스트라이크와 볼 계산
+      // 스트: 숫자와 위치가 일치, 볼: 숫자는 일치하지만 위치가 다름
+      let strike = ball = 0;
+      for(let i = 0; i<answer.length; i++){
+        const index = value.indexOf(answer[i]);
+        if(index > -1){
+          if(index === i){
+            strike += 1;
+          } else {
+            ball += 1;
+          }
+        }
+      }
+      if(strike === 0 && ball === 0){
+        outCount++;
+        $logs.append(`${value}: ${outCount} 아웃`, document.createElement('br'));
+      } else{
+        $logs.append(`${value}: ${strike} 스크라이크 ${ball} 볼`, document.createElement('br'));
+      tries.push(value);
+      }
+      
+      if(outCount === 3){
+        const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`);
+        $logs.appendChild(message);
+      }
+    });
+    
+  </script>
 </body>
 </html>
