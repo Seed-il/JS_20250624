@@ -1,0 +1,146 @@
+<!--
+10미만 : 빨간색, -> 글자색 흰색
+20미만 : 주황색,
+30미만 : 노란색,
+40미만 : 파란색, -> 흰색
+40이상 : 초록색, -> 흰색
+
+추첨 과정 중에는 클릭 못하도록 막기,
+추첨이 끝나고 버튼을 누르면 다시 처음부터 추첨 진행하도록
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ball {
+    display: inline-block; 
+    border: 1px solid black; 
+    border-radius: 20px; 
+    width: 40px;
+    height: 40px;
+    line-height: 40px; 
+    font-size: 20px; 
+    text-align: center; 
+    margin-right: 20px;
+  }
+  </style>
+</head>
+<body>
+  <form id="form">
+    <input name="input" placeholder="숫자 6개를 쉼표로 구분해 입력하세요." />
+    <button id="btn">추천</button>
+  </form>
+  <div id="result">당첨 숫자: </div>
+  <div id="bonus">보너스 숫자: </div>
+
+  <script>
+    const $form = document.querySelector('#form');
+    const $result = document.querySelector('#result');
+    const $bonus = document.querySelector('#bonus');
+    const $btn = document.querySelector('#btn');
+
+    function drawBall(number, $parent){
+      const $ball = document.createElement('div');
+      $ball.className = 'ball';
+      $ball.textContent = number;
+      if(number < 10){
+        $ball.style.backgroundColor = 'red';
+        $ball.style.color = 'white';
+      } else if(number < 20) {
+        $ball.style.backgroundColor = 'orange';
+      } else if(number < 30) {
+        $ball.style.backgroundColor = 'yellow';
+      } else if(number < 40) {
+        $ball.style.backgroundColor = 'blue';
+        $ball.style.color = 'white';
+      } else{
+        $ball.style.backgroundColor = 'green';
+        $ball.style.color = 'white';
+      }
+      $parent.appendChild($ball);
+    }
+
+    const setTimeoutPromise = (ms) => new Promise((resolve, reject) => {
+      setTimeout(resolve, ms);
+    });
+
+    $form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      // 이전 추첨한 이력이 있다면 제거
+      $result.textContent = '당첨 숫자: ';
+      $bonus.textContent = '보너스 숫자: ';
+
+      const string = event.target.input.value; // 입력한 값 저장
+      if(!string.trim()){
+        return alert('숫자를 입력하세요.')
+      }
+      const myNumbers = string.split(',').map((v) => parseInt(v.trim()));
+      if(myNumbers.length !== 6){
+        return alert('숫자 6개를 입력하세요.');
+      }
+      if(new Set(myNumbers).size !== 6){
+        return alert('중복된 숫자를 입력하지 마세요.');
+      }
+      if(myNumbers.find((v) => v > 45 || v < 1)){
+        return alert('1~45까지만 입력하세요.');
+      }
+
+      // 추첨 시작
+      $btn.disabled=true;
+
+      const candidate = Array(45).fill().map((v, i) => i + 1); // 1~45 배열
+      const shuffle = [];
+      while(candidate.length > 0) {
+        const random = Math.floor(Math.random() * candidate.length); // 무작위 인덱스
+        const spliceArray = candidate.splice(random, 1); // 배열에 넣기
+        const value = spliceArray[0];
+        shuffle.push(spliceArray[0]);
+      }
+      console.log(shuffle);
+      const winBalls = shuffle.slice(0, 6).sort((a, b) => a - b); // 당첨 숫자 뽑아 정렬하기
+      const bonus = shuffle[6]; // 보너스 숫자
+      console.log(winBalls, bonus);
+
+      for(let i = 0; i < winBalls.length; i++){ // 당첨 숫자 화면 표시
+        await setTimeoutPromise(1000); //1 초 딜레이
+        console.log(winBalls[i], i);
+        drawBall(winBalls[i], $result);
+      }
+      await setTimeoutPromise(1000);
+      drawBall(bonus, $bonus); // 보너스 번호 표시
+      await setTimeoutPromise(0); // 대화상자 출력 지연
+      
+      let count = 0;
+      myNumbers.forEach((my) =>{
+        if(winBalls.includes(my)){
+          count++;
+        }
+      });
+      if(count === 6){
+        alert('1등!');
+      } else if(count === 5){
+        if(myNumbers.includes(bonus)){
+          alert('2등!');
+        } else{
+          alert('3등!');
+        }
+      }  else if(count === 4){
+        alert('4등!');
+      } else if(count ===3){
+        alert('5등');
+      } else{
+        alert('꽝');
+      }
+
+
+      // 추첨 종료
+      $btn.disabled=false;
+    });
+  </script>
+</body>
+</html>

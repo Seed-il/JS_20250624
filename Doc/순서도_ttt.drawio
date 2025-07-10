@@ -1,0 +1,67 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="페이지-1" id="C5JIVh7tEAiHGOZcV6pu">
+    <mxGraphModel dx="896" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MFcExFCNKw-19StfSA69-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;유스케이스&lt;/h1&gt;&lt;p&gt;1. 3x3 테이블 생성&lt;/p&gt;&lt;p&gt;2. cell 클릭 시 O 표시&lt;/p&gt;&lt;p&gt;3. 클릭할 때마다 같은 표시로 가로/세로/대각선 으로 동일한 표시로 빙고가 되었는지 확인&lt;/p&gt;&lt;p&gt;4. 있다면 게임 끝, 결과 표시, 없다면 다음 순서 클릭 대기 반복&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-3" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="414" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="MFcExFCNKw-19StfSA69-3" parent="1" target="MFcExFCNKw-19StfSA69-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="429" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MFcExFCNKw-19StfSA69-5" target="MFcExFCNKw-19StfSA69-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-5" value="3x3 테이블 생성" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="389" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MFcExFCNKw-19StfSA69-6" target="MFcExFCNKw-19StfSA69-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="429" y="420" />
+              <mxPoint x="429" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-6" value="cell 클릭, O 혹은 X 표시" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="389" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.925;exitY=0.488;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MFcExFCNKw-19StfSA69-10" target="MFcExFCNKw-19StfSA69-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="550" as="sourcePoint" />
+            <mxPoint x="510" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="519" />
+              <mxPoint x="510" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-13" value="아니오" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MFcExFCNKw-19StfSA69-12">
+          <mxGeometry x="0.0121" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MFcExFCNKw-19StfSA69-10" target="MFcExFCNKw-19StfSA69-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-20" value="예" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MFcExFCNKw-19StfSA69-19">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-10" value="빙고 있는지?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="389" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MFcExFCNKw-19StfSA69-18" value="게임 끝" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="389" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

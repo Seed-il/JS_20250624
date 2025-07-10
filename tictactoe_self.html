@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTT</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid black;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table> -->
+
+  <script>
+    const { body } = document; // 구조분해 할당
+    // const body = document.body;
+
+    const $table = document.createElement('table'); // 테이블
+    const $result = document.createElement('result'); // 결과
+    
+    const rows = []; // 행
+    let turn = 'O'; // OX 
+
+    let clickable = true;
+
+    const checkWinner = (target) => { // 승패 판단
+      const rowIndex = target.parentNode.rowIndex; // tr의 행 인덱스
+      const cellIndex = target.cellIndex; // td의 열 인덱스
+      let hasWinner = false; // 세 칸이 같은 모양으로 채워졌는가? 
+      if ( // 가로줄 검사
+        rows[rowIndex][0].textContent === turn && 
+        rows[rowIndex][1].textContent === turn && 
+        rows[rowIndex][2].textContent === turn
+      ) {
+        hasWinner = true;
+      }
+      if ( // 세로줄 검사
+        rows[0][cellIndex].textContent === turn && 
+        rows[1][cellIndex].textContent === turn && 
+        rows[2][cellIndex].textContent === turn
+      ) {
+        hasWinner = true;
+      }
+      // 대각선 검사
+      if (
+        rows[0][0].textContent === turn && 
+        rows[1][1].textContent === turn && 
+        rows[2][2].textContent === turn
+      ) {
+        hasWinner = true;
+      }
+      if (
+        rows[0][2].textContent === turn && 
+        rows[1][1].textContent === turn && 
+        rows[2][0].textContent === turn
+      ) {
+        hasWinner = true;
+      }
+      return hasWinner;
+    };
+
+    const checkWinnerAndDraw = (target) =>{
+      const hasWinner = checkWinner(target);
+        if(hasWinner){
+          $result.textContent = `${turn}님이 승리`;
+          $table.removeEventListener('click', callback);
+          return;
+        }
+        // flat() : 2차원 배열을 1차월 배열로 나열(배열을 1차원씩 내림)
+        // every() : 전체 항목에 대하여, 하나라도 예외가 있으면 false 반환
+        const draw = rows.flat().every((cell) => cell.textContent);
+        if(draw){
+          $result.textContent = '무승부';
+          return;
+        }
+        //if(turn === 'O' ? turn = 'X' : turn = 'O');
+        turn = turn === 'O' ? 'X' : 'O'; // 삼항 조건
+    };
+
+    const callback = (event) =>{
+      if(!clickable) return;
+      if(event.target.textContent) return; // 칸에 이미 텍스트가 있다면 넘김
+      event.target.textContent = turn;
+
+      checkWinnerAndDraw(event.target)
+
+      if(turn === 'X'){
+        clickable = false;
+
+        setTimeout(()=>{
+          // 컴퓨터가 비어있는 셀에 무작위 선택하도록
+          // filter() : 조건에 맞는 것들 전부 
+          const emptyCells = rows.flat().filter((v) => !v.textContent);
+          const randomCells = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+          randomCells.textContent = turn;
+
+          checkWinnerAndDraw(randomCells);
+
+          clickable = true;
+        }, 1000);
+
+        
+      }
+    };
+
+    for(let i = 0; i<3; i++){ // 행(가로줄)
+      const $tr = document.createElement('tr');
+      const cells = []; 
+      for(let j = 0; j<3; j++){ // 열(세로줄)
+        const $td = document.createElement('td');
+        cells.push($td); // 1행 당 세로줄 만큼 셀 추가
+        //$td.addEventListener('click', callback); // 이벤트 버블링 사용 이전 방식
+        $tr.append($td);
+      }
+      rows.push(cells); // 세로줄만큼 추가된 셀을 가로줄만큼 rows에 추가
+      $table.append($tr);
+    }
+    $table.addEventListener('click', callback);//이벤트 버블링 활용, 이렇게 하면 remove도 한번만 하면 된다.
+    
+    body.append($table); // UI출력
+    body.append($result); // UI출력
+  </script>
+</body>
+</html>
