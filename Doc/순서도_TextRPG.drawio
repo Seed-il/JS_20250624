@@ -1,0 +1,124 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="페이지-1" id="HohAhBraHxlmuBMSHBhL">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;유스케이스&lt;/h1&gt;&lt;p&gt;1. hero 이름 입력&lt;/p&gt;&lt;p&gt;2. 게임 폼(1. 모험/2. 휴식/3. 종료)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 1) 모험 - 배틀 폼 - 몬스터 생성&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 2) 휴식 - 회복 및 게임 폼&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 3) 종료 - 1번으로 이동&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;3. 배틀 폼(1. 공격/2.회복/3. 도망)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 1) 공격 - 서로 주고받기&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 2) 회복 - 회복하고 맞기&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 3) 도망 - 2번으로 이동&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="180" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-3" target="f8jFQhwjxKy-EItnDr-l-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-3" value="대기" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-4" target="f8jFQhwjxKy-EItnDr-l-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-4" value="용사 이름 입력" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-6" target="f8jFQhwjxKy-EItnDr-l-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-6" value="게임 폼 활성화" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-8" value="대기" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-10" target="f8jFQhwjxKy-EItnDr-l-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-10" value="게임 폼" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-14" value="1번 모험" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-11" target="f8jFQhwjxKy-EItnDr-l-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-18" value="2번 휴식" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-11" target="f8jFQhwjxKy-EItnDr-l-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-20" value="3번 종료" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-11" target="f8jFQhwjxKy-EItnDr-l-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-11" value="1. 모험&lt;div&gt;2. 휴식&lt;/div&gt;&lt;div&gt;3. 종료&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="570" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-13" target="f8jFQhwjxKy-EItnDr-l-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-13" value="배틀 폼 활성화" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-15" value="랜덤 몬스터 생성" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-17" value="hp 충전" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="570" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-19" value="1번 폼으로 이동" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="730" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-21" target="f8jFQhwjxKy-EItnDr-l-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-21" value="배틀 폼" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-25" value="1번 공격" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-22" target="f8jFQhwjxKy-EItnDr-l-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-39" value="2번 회복" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-22" target="f8jFQhwjxKy-EItnDr-l-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-41" value="3번 도망" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-22" target="f8jFQhwjxKy-EItnDr-l-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-22" value="1. 공격&lt;div&gt;2. 회복&lt;/div&gt;&lt;div&gt;3. 도망&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-24" target="f8jFQhwjxKy-EItnDr-l-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-24" value="서로 주고받기" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-29" value="아니오" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-26" target="f8jFQhwjxKy-EItnDr-l-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-31" value="예" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-26" target="f8jFQhwjxKy-EItnDr-l-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-26" value="내가 죽었나?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-33" value="예" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-28" target="f8jFQhwjxKy-EItnDr-l-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8jFQhwjxKy-EItnDr-l-28" target="f8jFQhwjxKy-EItnDr-l-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-28" value="몬스터가 죽었나?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="800" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-30" value="사망. 게임 종료" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-32" value="경험치 상승, 게임 폼 활성화" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="800" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-36" value="대기" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="990" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-38" value="hp 회복, 맞기" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f8jFQhwjxKy-EItnDr-l-40" value="게임폼 활성화" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

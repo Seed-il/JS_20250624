@@ -1,0 +1,61 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="페이지-1" id="eR1372N3UgXbR_scT18N">
+    <mxGraphModel dx="1042" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-13" target="S7LjPsqsbYEkWPQuBM5x-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-13" value="시작" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-17" target="S7LjPsqsbYEkWPQuBM5x-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-17" value="사용자 이름 작성" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-19" value="대기" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-21" target="S7LjPsqsbYEkWPQuBM5x-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-21" value="메뉴 입력 버튼 클릭" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-25" value="1번 모험" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-22" target="S7LjPsqsbYEkWPQuBM5x-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-29" value="2. 휴식" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-22" target="S7LjPsqsbYEkWPQuBM5x-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-22" target="S7LjPsqsbYEkWPQuBM5x-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-32" value="3. 종료" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-22" target="S7LjPsqsbYEkWPQuBM5x-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-22" value="몇번인가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S7LjPsqsbYEkWPQuBM5x-24" target="S7LjPsqsbYEkWPQuBM5x-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-24" value="적과 마주침" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-26" value="전투 메뉴로 전환" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-28" value="주인공의 체력 회복" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S7LjPsqsbYEkWPQuBM5x-30" value="게임 종료" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
